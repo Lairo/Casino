@@ -12,12 +12,6 @@
             playerArray[1] = new Player() { Cash = 2000, Name = "Bob", };
             Random random = new Random();
             
-            
-
-            ///Make an existing players'
-            ///1. Bob
-            ///2. Joe
-            ///Add option to add a new player to the list 
             while (existingPlayer == false)
             {
                 Console.WriteLine("Pick a player?\n1.Bob\n2.Joe");
@@ -28,8 +22,7 @@
                 }
                 else if (pick == "2")
                 {
-                    playerChoice(pick);                   
-
+                    playerChoice(pick);
                 }
                 else
                 {
@@ -49,9 +42,7 @@
                         int.TryParse(Console.ReadLine(), out int newOdds);
                         odds = newOdds * 0.01;
                         Console.Clear();
-                        Console.WriteLine($"Your odds have been set to {odds}.");
-                        continue;
-
+                        Console.WriteLine($"Your odds have been set to {odds}.");                        
                     }
                     else if (decision == "no" || decision == "No")
                     {
@@ -94,11 +85,15 @@
                         Console.WriteLine("Please enter the values stated");
                         Console.Clear();
                         continue;
-
                     }
                 }
             }
         }
+        /// <summary>
+        /// Calculates player details that are picked from the player array depending on player choice.
+        /// </summary>
+        /// <param name="e">Is a number to pick the player </param>
+        /// <returns></returns>
         public static string playerChoice(string e)
         {
             int.TryParse(e, out int choice);

@@ -8,6 +8,8 @@ namespace Casino
         /// <summary>
         /// Writes my name the amount of cash I have to the console.
         /// </summary>
+        /// 
+
 
         public void WriteMyInfo()
         {
